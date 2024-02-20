@@ -12,15 +12,11 @@ const Hero = () => {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       const t1 = gsap.timeline();
-      t1.from(
-        '#intro-slider',
-        { xPercent: '-100' },
-        {
-          xPercent: '0',
-          duration: 1.6,
-          delay: 1,
-        }
-      )
+      t1.from('#intro-slider', {
+        xPercent: '-100',
+        duration: 1.3,
+        delay: 0.5,
+      })
         .from(['#title-1', '#title-2', '#title-3'], {
           opacity: 0,
           y: '+=30',
