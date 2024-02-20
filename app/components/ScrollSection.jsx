@@ -3,6 +3,7 @@
 import { gsap } from 'gsap/dist/gsap';
 
 import { useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
@@ -47,16 +48,60 @@ function ScrollSection() {
           className="scroll-section-inner h-[100vh] w-[400vw] flex flex-row relative"
         >
           <div className="scroll-section h-[100vh] w-[100vw] flex justify-center items-center">
-            <div className="bg-white h-[50vh] w-[50vw]">Section 1</div>
+            <div className="bg-white h-[50vh] w-[50vw] relative">
+              <span className="absolute top-0 left-0 z-10 p-3">
+                Swimming pool Area
+              </span>
+              <Image
+                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+                src="/assets/image_1.jpg"
+                alt="picture of a swimming pool"
+                fill
+                priority
+              />
+            </div>
           </div>
           <div className="scroll-section h-[100vh] w-[100vw] flex justify-center items-center">
-            <div className="bg-white h-[50vh] w-[50vw]">Section 2</div>
+            <div className="bg-white h-[50vh] w-[50vw] relative">
+              <span className="absolute top-0 left-0 z-10 p-3">
+                Swimming pool Area
+              </span>
+              <Image
+                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+                src="/assets/image_1.jpg"
+                alt="picture of a swimming pool"
+                fill
+                priority
+              />
+            </div>
           </div>
           <div className="scroll-section h-[100vh] w-[100vw] flex justify-center items-center">
-            <div className="bg-white h-[50vh] w-[50vw]">Section 3</div>
+            <div className="bg-white h-[50vh] w-[50vw] relative">
+              <span className="absolute top-0 left-0 z-10 p-3">
+                Swimming pool Area
+              </span>
+              <Image
+                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+                src="/assets/image_1.jpg"
+                alt="picture of a swimming pool"
+                fill
+                priority
+              />
+            </div>
           </div>
           <div className="scroll-section h-[100vh] w-[100vw] flex justify-center items-center">
-            <div className="bg-white h-[50vh] w-[50vw]">Section 4</div>
+            <div className="bg-white h-[50vh] w-[50vw] relative">
+              <span className="absolute top-0 left-0 z-10 p-3">
+                Swimming pool Area
+              </span>
+              <Image
+                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+                src="/assets/image_1.jpg"
+                alt="picture of a swimming pool"
+                fill
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
