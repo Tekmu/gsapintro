@@ -34,14 +34,12 @@ const Hero = () => {
         duration: 1.6,
       });
 
-    // Animation for welcome and sub-title
     t1.from(['#welcome', '#sub-title'], {
       opacity: 0,
       duration: 1.6,
       stagger: 1.5,
     });
 
-    // Animation for the box
     t1.from('.box', {
       opacity: 1,
       duration: 1.6,
