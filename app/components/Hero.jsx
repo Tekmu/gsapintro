@@ -62,13 +62,13 @@ const Hero = () => {
         <div className="box flex flex-col gap-30 justify-center items-center">
           <h1
             id="welcome"
-            className="font-bold opacity-0 font-montserrat text-7xl text-gray-200"
+            className="font-bold font-montserrat text-7xl text-gray-200"
           >
             WELCOME TO.
           </h1>
           <h2
             id="sub-title"
-            className="text-5xl opacity-0 text-gray-200 font-playfair_display"
+            className="text-5xl text-gray-200 font-playfair_display"
           >
             LISELI LODGE
           </h2>
