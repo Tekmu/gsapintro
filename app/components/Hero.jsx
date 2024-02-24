@@ -1,56 +1,44 @@
 'use client';
 
-import { useRef, useLayoutEffect } from 'react';
-
-import gsap from 'gsap'; // <-- import GSAP
-import { useGSAP } from '@gsap/react'; // <-- import the hook from our React package
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const Hero = () => {
-  //   const container = useRef();
   const comp = useRef(null);
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      const t1 = gsap.timeline();
-      t1.from('#intro-slider', {
+  // Use useGSAP hook instead of useLayoutEffect
+  useGSAP(() => {
+    const t1 = gsap.timeline();
+    t1.set('#intro-slider', { opacity: 1 })
+      .from('#intro-slider', {
         xPercent: '-100',
         duration: 1.3,
         delay: 0.5,
       })
-        .from(['#title-1', '#title-2', '#title-3'], {
-          opacity: 0,
-          y: '+=30',
-          delay: 1,
-          stagger: 1,
-        })
-        .to(['#title-1', '#title-2', '#title-3'], {
-          opacity: 0,
-          y: '-=30',
-          delay: 1,
-          stagger: 1,
-        })
-        .to('#intro-slider', {
-          xPercent: '-100',
-          delay: 1,
-          duration: 1.6,
-        })
-        .from(['#welcome', '#sub-title'], {
-          opacity: 0,
-          duration: 1.6,
-          stagger: 1.5,
-        });
-    }, comp);
-
-    return () => ctx.revert();
-  }, []);
-
-  //   useGSAP(
-  //     () => {
-  //       // gsap code here...
-  //       gsap.to('.box', { stagger: 0.1, duration: 3 }); // <-- automatically reverted
-  //     },
-  //     { scope: container }
-  //   ); // <-- scope for selector text (optional)
+      .from(['#title-1', '#title-2', '#title-3'], {
+        opacity: 0,
+        y: '+=30',
+        delay: 1,
+        stagger: 1,
+      })
+      .to(['#title-1', '#title-2', '#title-3'], {
+        opacity: 0,
+        y: '-=30',
+        delay: 1,
+        stagger: 1,
+      })
+      .to('#intro-slider', {
+        xPercent: '-100',
+        delay: 1,
+        duration: 1.6,
+      })
+      .from(['#welcome', '#sub-title'], {
+        opacity: 0,
+        duration: 1.6,
+        stagger: 1.5,
+      });
+  }, []); // Empty dependency array means it will run only once
 
   return (
     <header
@@ -59,7 +47,7 @@ const Hero = () => {
     >
       <div
         id="intro-slider"
-        className="flex flex-col justify-center items-center w-full h-screen absolute top-0 left-0 z-10 p-10 bg-gray-50 tracking-tight text-black text-3xl gap-4 font-playfair_display"
+        className="flex flex-col justify-center opacity-0 items-center w-full h-screen absolute top-0 left-0 z-10 p-10 bg-gray-50 tracking-tight text-black text-3xl gap-4 font-playfair_display"
       >
         <span id="title-1">
           Discover Tranquility in Zambias Western Province
