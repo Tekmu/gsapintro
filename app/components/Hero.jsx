@@ -51,7 +51,7 @@ const Hero = () => {
         className="flex flex-col justify-center opacity-0 items-center w-full h-screen absolute top-0 left-0 z-10 p-10 bg-gray-50 tracking-tight text-black text-3xl gap-4 font-playfair_display"
       >
         <span id="title-1">
-          Discover Tranquility in Zambia's Western Province
+          Discover Tranquility in Zambia&apos;s Western Province
         </span>
         <span id="title-2">Where Nature Meets Comfort</span>
         <span id="title-3">Experience Authentic Hospitality</span>
