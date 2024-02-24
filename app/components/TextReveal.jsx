@@ -9,7 +9,6 @@ const TextReveal = () => {
 
   function useArrayRef() {
     const lettersRef = useRef([]);
-    lettersRef.current = [];
     return [lettersRef, (ref) => ref && lettersRef.current.push(ref)];
   }
 
