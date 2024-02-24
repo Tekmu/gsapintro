@@ -39,12 +39,6 @@ const Hero = () => {
       duration: 1.6,
       stagger: 1.5,
     });
-
-    t1.from('.box', {
-      opacity: 1,
-      duration: 1.6,
-      stagger: 1.5,
-    });
   }, []); // Empty dependency array means it will run only once
 
   return (
@@ -64,7 +58,7 @@ const Hero = () => {
       </div>
 
       <div className="app">
-        <div className="box flex flex-col gap-30 justify-center items-center opacity-0">
+        <div className="box flex flex-col gap-30 justify-center items-center">
           <h1
             id="welcome"
             className="font-bold font-montserrat text-7xl text-gray-200"
