@@ -40,6 +40,13 @@ const Hero = () => {
       duration: 1.6,
       stagger: 1.5,
     });
+
+    // Animation for the box
+    t1.from('.box', {
+      opacity: 1,
+      duration: 1.6,
+      stagger: 1.5,
+    });
   }, []); // Empty dependency array means it will run only once
 
   return (
@@ -52,14 +59,14 @@ const Hero = () => {
         className="flex flex-col justify-center opacity-0 items-center w-full h-screen absolute top-0 left-0 z-10 p-10 bg-gray-50 tracking-tight text-black text-3xl gap-4 font-playfair_display"
       >
         <span id="title-1">
-          Discover Tranquility in Zambias Western Province
+          Discover Tranquility in Zambia's Western Province
         </span>
         <span id="title-2">Where Nature Meets Comfort</span>
         <span id="title-3">Experience Authentic Hospitality</span>
       </div>
 
       <div className="app">
-        <div className="box flex flex-col gap-30 justify-center items-center">
+        <div className="box flex flex-col gap-30 justify-center items-center opacity-0">
           <h1
             id="welcome"
             className="font-bold font-montserrat text-7xl text-gray-200"
