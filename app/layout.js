@@ -1,5 +1,17 @@
-import { Montserrat, Space_Grotesk, Playfair_Display } from 'next/font/google';
+import {
+  Montserrat,
+  Space_Grotesk,
+  Playfair_Display,
+  Oswald,
+} from 'next/font/google';
+import Footer from '../components/Footer';
+import Nav from '../components/Nav';
 import './globals.css';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+import SmoothScroll from '../components/SmoothScroll';
+import { ScrollSmoother } from '@studio-freight/react-lenis';
 
 const space = Space_Grotesk({
   subsets: ['latin'],
@@ -13,12 +25,18 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 });
 
+const oswald = Oswald({ subsets: ['latin'], variable: '--font-oswald' });
+
 const play_fair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-play_fair',
   weight: '500',
   display: 'swap',
 });
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother, useGSAP);
+}
 
 export const metadata = {
   title: 'Create Next App',
@@ -29,9 +47,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${space.variable} ${play_fair.variable}`}
+        className={`${montserrat.variable} ${oswald.variable} ${space.variable} ${play_fair.variable}`}
       >
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
+        <Footer />
       </body>
     </html>
   );

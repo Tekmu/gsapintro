@@ -11,6 +11,7 @@ module.exports = {
         spaceGrotesk: ['var(--font-space)'],
         montserrat: ['var(--font-montserrat)'],
         playfair_display: ['var(--font-playfair)'],
+        oswald: ['var(--font-oswald)'],
       },
     },
   },
